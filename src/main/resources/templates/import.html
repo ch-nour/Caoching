@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="blank" >
+<head>
+<meta charset="UTF-8">
+<title>Impoter des tests</title>
+</head>
+<body>
+
+		<div layout:fragment="content">
+			<h1 class="page-header">Import</h1>
+			
+			<div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+						Importer des tests                        
+						</div>
+				 		
+				 		<div class="panel-body">
+	                            <div class="row">
+	                                <div class="col-lg-6">
+	                                		<form action="uploadfile"  method="post" enctype="multipart/form-data">
+			                                		<div class="form-group">
+					                                 <label style="float: left" >Titre : </label> 
+					                                 <input type="text" name="titre"  class="form-control">
+					                                 <br>
+					                                 <label style="float: left" >Sujet : </label> 
+					                                 <input type="text" name="sujet" class="form-control">
+					                                 <br>
+									                 <label>Choose a file</label>
+									                 <input name="file" type="file">
+					                    				<br>
+					                    				<button type="submit" class="btn btn-primary">Importer</button>
+		            								</div>
+		            						</form>
+									</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+        </div>
+
+</body>
+</html>

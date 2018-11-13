@@ -1,0 +1,72 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Modifier votre mot de passe</title>
+
+  
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  
+
+<link rel="stylesheet" href="css/test.css">
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+  
+</head>
+
+
+
+<body>
+        	<img class="logologin" src="../img/logo rahma consulting rone.png">
+        
+        
+  <div id="app">
+	<h2> Password Strength</h2>
+
+	<div class="input_container">
+		<ul>
+			<li v-bind:class="{ is_valid: contains_eight_characters }">5 Caractères</li>
+			<li v-bind:class="{ is_valid: contains_number }">Contient un nombre</li>
+			<li v-bind:class="{ is_valid: contains_uppercase }">Contient un majuscule</li>
+			<li v-bind:class="{ is_valid: contains_special_character }">Contient un caractère spécial</li>
+		</ul>
+
+		<div class="checkmark_container" v-bind:class="{ show_checkmark: valid_password }">		
+			<svg width="50%" height="50%" viewBox="0 0 140 100">
+				<path class="checkmark" v-bind:class="{ checked: valid_password }" d="M10,50 l25,40 l95,-70" />
+			</svg>
+		</div>
+		<form action="/modifypass">
+    <input type="password" name="pass" @input="checkPassword" v-model="password" autocomplete="off" placeholder="Nouveau mot de passe" id="password" required="required"/> <br>
+    <input type="password" @input="checkPassword"  autocomplete="off" placeholder="Comfirmer mot de passe" id="confirm_password" required="required"/><br>
+    <input type="hidden" name="id" th:value="${id}"/>
+	<button type="submit" class="btn btn-lg btn-success btn-block" id="ss">Changer Mot de passe</button>
+    </form>
+	</div>
+</div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+
+  
+
+    <script  src="js/test.js"></script>
+
+<script type="text/javascript">
+document.getElementById('ss').style.visibility = 'hidden';
+</script>
+
+
+</body>
+
+</html>

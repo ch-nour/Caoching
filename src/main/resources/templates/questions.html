@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+  <meta charset="UTF-8">
+  <title>hehehehehhehehehehehehheheeheh</title>
+  
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!-- questions taken from http://davidshariff.com/quiz/ -->
+<header>
+  <small th:text="${titre}">hhdhdhdhdhhdhdh</small>
+</header>
+
+
+
+
+<div id="emc-score"></div>
+<div class="wrap">
+  <div class="row">
+  
+  
+  <section data-quiz-item>
+    <div class="question" >cdcdcdc</div>
+    <div class="choices" style="margin-top:5%;" data-choices='["1","2","3","4","5"]'>
+    </div>
+  </section>
+    <section data-quiz-item>
+    <div class="question" >cdcdcdc</div>
+    <div class="choices" style="margin-top:5%;" data-choices='["1","2","3","4","5"]'>
+    </div>
+  </section>
+    <section data-quiz-item>
+    <div class="question" >cdcdcdc</div>
+    <div class="choices" style="margin-top:5%;" data-choices='["1","2","3","4","5"]'>
+    </div>
+  </section>
+  
+  <input  type="text" id="answers" name="answers"></input>
+  <input type="text" th:value="${code}" id="code"></input>
+
+  </div>
+  
+  
+  <div class="submit">
+  <button id="emc-submit" onclick="myFunction()">Submit Answers</button>
+  </div>
+  
+</div>
+
+<footer>
+<div id="emc-progress"></div>
+</footer>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script  src="js/index.js"></script>
+
+</body>
+
+</html>
